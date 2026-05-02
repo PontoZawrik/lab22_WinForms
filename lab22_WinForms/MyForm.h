@@ -39,6 +39,18 @@ namespace lab22WinForms {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::CheckBox^ checkBox1;
+	private: System::Windows::Forms::CheckBox^ checkBox2;
+	private: System::Windows::Forms::CheckBox^ checkBox3;
+	private: System::Windows::Forms::GroupBox^ groupBox1;
+	private: System::Windows::Forms::RadioButton^ radioButton1;
+	private: System::Windows::Forms::RadioButton^ radioButton2;
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::Button^ button5;
+	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::GroupBox^ groupBox2;
 	protected:
 
 	private:
@@ -59,6 +71,19 @@ namespace lab22WinForms {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -83,7 +108,7 @@ namespace lab22WinForms {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(24, 110);
+			this->button3->Location = System::Drawing::Point(24, 103);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(165, 23);
 			this->button3->TabIndex = 2;
@@ -93,7 +118,7 @@ namespace lab22WinForms {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(24, 159);
+			this->button4->Location = System::Drawing::Point(24, 138);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(75, 23);
 			this->button4->TabIndex = 3;
@@ -104,17 +129,150 @@ namespace lab22WinForms {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(208, 45);
+			this->label1->Location = System::Drawing::Point(218, 26);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(0, 16);
 			this->label1->TabIndex = 4;
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			// 
+			// checkBox1
+			// 
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->Location = System::Drawing::Point(221, 66);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(131, 20);
+			this->checkBox1->TabIndex = 5;
+			this->checkBox1->Text = L"Серый/Красный";
+			this->checkBox1->UseVisualStyleBackColor = true;
+			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox1_CheckedChanged);
+			// 
+			// checkBox2
+			// 
+			this->checkBox2->AutoSize = true;
+			this->checkBox2->Location = System::Drawing::Point(221, 103);
+			this->checkBox2->Name = L"checkBox2";
+			this->checkBox2->Size = System::Drawing::Size(87, 20);
+			this->checkBox2->TabIndex = 6;
+			this->checkBox2->Text = L"Зелёный";
+			this->checkBox2->UseVisualStyleBackColor = true;
+			this->checkBox2->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox2_CheckedChanged);
+			// 
+			// checkBox3
+			// 
+			this->checkBox3->AutoSize = true;
+			this->checkBox3->Location = System::Drawing::Point(221, 138);
+			this->checkBox3->Name = L"checkBox3";
+			this->checkBox3->Size = System::Drawing::Size(82, 20);
+			this->checkBox3->TabIndex = 7;
+			this->checkBox3->Text = L"Жёлтый";
+			this->checkBox3->UseVisualStyleBackColor = true;
+			this->checkBox3->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox3_CheckedChanged);
+			// 
+			// groupBox1
+			// 
+			this->groupBox1->Controls->Add(this->radioButton2);
+			this->groupBox1->Controls->Add(this->radioButton1);
+			this->groupBox1->Location = System::Drawing::Point(369, 26);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(233, 135);
+			this->groupBox1->TabIndex = 8;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"Информация о приложении";
+			// 
+			// radioButton2
+			// 
+			this->radioButton2->AutoSize = true;
+			this->radioButton2->Location = System::Drawing::Point(7, 86);
+			this->radioButton2->Name = L"radioButton2";
+			this->radioButton2->Size = System::Drawing::Size(187, 20);
+			this->radioButton2->TabIndex = 1;
+			this->radioButton2->TabStop = true;
+			this->radioButton2->Text = L"Технология приложения";
+			this->radioButton2->UseVisualStyleBackColor = true;
+			this->radioButton2->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton2_CheckedChanged);
+			// 
+			// radioButton1
+			// 
+			this->radioButton1->AutoSize = true;
+			this->radioButton1->Location = System::Drawing::Point(7, 40);
+			this->radioButton1->Name = L"radioButton1";
+			this->radioButton1->Size = System::Drawing::Size(68, 20);
+			this->radioButton1->TabIndex = 0;
+			this->radioButton1->TabStop = true;
+			this->radioButton1->Text = L"Автор";
+			this->radioButton1->UseVisualStyleBackColor = true;
+			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton1_CheckedChanged);
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(26, 183);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(100, 22);
+			this->textBox1->TabIndex = 9;
+			this->textBox1->Text = L"Делимое";
+			this->textBox1->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::textBox1_MouseClick);
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(146, 183);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(100, 22);
+			this->textBox2->TabIndex = 10;
+			this->textBox2->Text = L"Делитель";
+			this->textBox2->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::textBox2_MouseClick);
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(362, 184);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(100, 22);
+			this->textBox3->TabIndex = 11;
+			this->textBox3->Text = L"Результат";
+			// 
+			// button5
+			// 
+			this->button5->Location = System::Drawing::Point(252, 184);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(102, 23);
+			this->button5->TabIndex = 12;
+			this->button5->Text = L"Вычислить";
+			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
+			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(468, 183);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(91, 23);
+			this->button6->TabIndex = 13;
+			this->button6->Text = L"Очистить";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			// 
+			// groupBox2
+			// 
+			this->groupBox2->Location = System::Drawing::Point(26, 230);
+			this->groupBox2->Name = L"groupBox2";
+			this->groupBox2->Size = System::Drawing::Size(576, 161);
+			this->groupBox2->TabIndex = 14;
+			this->groupBox2->TabStop = false;
+			this->groupBox2->Text = L"Задание 4";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(414, 259);
+			this->ClientSize = System::Drawing::Size(654, 403);
+			this->Controls->Add(this->groupBox2);
+			this->Controls->Add(this->button6);
+			this->Controls->Add(this->button5);
+			this->Controls->Add(this->textBox3);
+			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->groupBox1);
+			this->Controls->Add(this->checkBox3);
+			this->Controls->Add(this->checkBox2);
+			this->Controls->Add(this->checkBox1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
@@ -122,19 +280,24 @@ namespace lab22WinForms {
 			this->Controls->Add(this->button1);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		label1->Text = "Кнопка работает.";
-	}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	label1->Text = "Кнопка работает.";
+}
+
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
+
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	label1->Text = "";
 }
+
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (this->BackColor == SystemColors::ButtonFace) {
 		this->BackColor = Color::Red;
@@ -143,8 +306,77 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 		this->BackColor = SystemColors::ButtonFace;
 	}
 }
+
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
+}
+
+private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (this->BackColor == Color::Red) {
+		this->BackColor = SystemColors::ButtonFace;
+	}
+	else {
+		this->BackColor = Color::Red;
+	}
+	this->checkBox2->CheckState = CheckState::Unchecked;
+	this->checkBox3->CheckState = CheckState::Unchecked;
+}
+
+private: System::Void checkBox2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	this->BackColor = Color::Green;
+	this->checkBox1->CheckState = CheckState::Unchecked;
+	this->checkBox3->CheckState = CheckState::Unchecked;
+}
+
+private: System::Void checkBox3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	this->BackColor = Color::Yellow;
+	this->checkBox1->CheckState = CheckState::Unchecked;
+	this->checkBox2->CheckState = CheckState::Unchecked;
+}
+
+private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	this->Text = "Приложение Толстика Д.П. (с)2026";
+}
+
+private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	this->Text = "Это Windows Forms приложение";
+}
+
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	try {
+		double a = Convert::ToDouble(this->textBox1->Text);
+		double b = Convert::ToDouble(this->textBox2->Text);
+
+		if (b == 0 || a / b < 0) {
+			MessageBox::Show("Попытка деления на ноль или извлечения корня из отрицательного числа.", "Ошибка");
+			button6_Click(sender, System::EventArgs::Empty);
+		}
+		else {
+			double c = Math::Sqrt(a / b);
+			this->textBox3->Clear();
+			this->textBox3->Text = c.ToString();
+			this->Text = c.ToString();
+		}
+	}
+	catch (System::FormatException^ e) {
+		MessageBox::Show(e->Message->ToString(), "Ошибка формата дынных!");
+		button6_Click(sender, System::EventArgs::Empty);
+	}
+}
+
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->textBox1->Clear();
+	this->textBox2->Clear();
+	this->textBox3->Clear();
+	this->textBox3->Text = "Результат";
+}
+
+private: System::Void textBox1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+	this->textBox1->Clear();
+}
+
+private: System::Void textBox2_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+	this->textBox2->Clear();
 }
 };
 }
