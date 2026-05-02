@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="lab22_WinForms/lab22_WinForms.vcxproj" />
+  <Project Path="z5/z5.vcxproj" />
 </Solution>
