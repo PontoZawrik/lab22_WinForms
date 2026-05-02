@@ -51,6 +51,12 @@ namespace lab22WinForms {
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::GroupBox^ groupBox2;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Button^ button7;
+	private: System::Windows::Forms::Button^ button9;
+	private: System::Windows::Forms::Button^ button8;
+	private: System::Windows::Forms::TextBox^ textBox5;
 	protected:
 
 	private:
@@ -83,7 +89,14 @@ namespace lab22WinForms {
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
+			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -120,7 +133,7 @@ namespace lab22WinForms {
 			// 
 			this->button4->Location = System::Drawing::Point(24, 138);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(75, 23);
+			this->button4->Size = System::Drawing::Size(92, 23);
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"Закрыть";
 			this->button4->UseVisualStyleBackColor = true;
@@ -251,18 +264,79 @@ namespace lab22WinForms {
 			// 
 			// groupBox2
 			// 
+			this->groupBox2->Controls->Add(this->button9);
+			this->groupBox2->Controls->Add(this->button8);
+			this->groupBox2->Controls->Add(this->textBox5);
+			this->groupBox2->Controls->Add(this->textBox4);
+			this->groupBox2->Controls->Add(this->label2);
+			this->groupBox2->Controls->Add(this->button7);
 			this->groupBox2->Location = System::Drawing::Point(26, 230);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(576, 161);
+			this->groupBox2->Size = System::Drawing::Size(576, 98);
 			this->groupBox2->TabIndex = 14;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Задание 4";
+			// 
+			// button9
+			// 
+			this->button9->Location = System::Drawing::Point(334, 61);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(100, 23);
+			this->button9->TabIndex = 5;
+			this->button9->Text = L"Очистить";
+			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click);
+			// 
+			// button8
+			// 
+			this->button8->Location = System::Drawing::Point(119, 61);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(99, 23);
+			this->button8->TabIndex = 4;
+			this->button8->Text = L"Вычислить";
+			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(226, 62);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(100, 22);
+			this->textBox5->TabIndex = 3;
+			this->textBox5->Text = L"Вершки";
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(13, 62);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(100, 22);
+			this->textBox4->TabIndex = 2;
+			this->textBox4->Text = L"Сантиметры";
+			this->textBox4->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::textBox4_MouseClick);
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(107, 24);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(0, 16);
+			this->label2->TabIndex = 1;
+			// 
+			// button7
+			// 
+			this->button7->Location = System::Drawing::Point(15, 21);
+			this->button7->Name = L"button7";
+			this->button7->Size = System::Drawing::Size(75, 23);
+			this->button7->TabIndex = 0;
+			this->button7->Text = L"Автор";
+			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(654, 403);
+			this->ClientSize = System::Drawing::Size(654, 337);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
@@ -282,6 +356,8 @@ namespace lab22WinForms {
 			this->Text = L"MyForm";
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
+			this->groupBox2->ResumeLayout(false);
+			this->groupBox2->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -377,6 +453,44 @@ private: System::Void textBox1_MouseClick(System::Object^ sender, System::Window
 
 private: System::Void textBox2_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 	this->textBox2->Clear();
+}
+
+private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->label2->Text == "") {
+		this->label2->Text = "Дмитрий Толстик Т-491";
+	}
+	else {
+		this->label2->Text = "";
+	}
+}
+
+private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+	try {
+		double a = Convert::ToDouble(this->textBox4->Text);
+
+		if (a < 0) {
+			MessageBox::Show("Попытка введения отрицательного числа.", "Ошибка");
+			button9_Click(sender, System::EventArgs::Empty);
+		}
+		else {
+			double b = a / 4.445;
+			this->textBox5->Clear();
+			this->textBox5->Text = b.ToString() + " вершков";
+		}
+	}
+	catch (System::FormatException^ e) {
+		MessageBox::Show(e->Message->ToString(), "Ошибка формата дынных!");
+		button9_Click(sender, System::EventArgs::Empty);
+	}
+}
+
+private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->textBox4->Text = "Сантиметры";
+	this->textBox5->Text = "Вершки";
+}
+
+private: System::Void textBox4_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+	this->textBox4->Clear();
 }
 };
 }
